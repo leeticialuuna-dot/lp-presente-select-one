@@ -93,28 +93,25 @@ Enquanto `SCRIPT_URL` estiver com o valor de placeholder, o formulário
 funciona normalmente (mostra a tela de download), mas os dados não são
 gravados em nenhuma planilha — só aparece um aviso no console do navegador.
 
-## 5. Publicar (GitHub Pages, opcional)
+## 5. Publicar (GitHub Pages)
 
-Este teste local não exige publicação online, mas se um dia quiser publicar
-gratuitamente:
+Já está publicado! Repositório: https://github.com/leeticialuuna-dot/lp-presente-select-one
+
+Para atualizar no futuro (depois de editar os arquivos):
 
 ```bash
-git init
 git add .
-git commit -m "LP presente - versão inicial"
-git branch -M main
-git remote add origin <URL_DO_SEU_REPOSITORIO_GITHUB>
-git push -u origin main
+git commit -m "descreva o que mudou"
+git push
 ```
 
 Depois, no GitHub: **Settings → Pages → Build and deployment → Source:
 Deploy from a branch → Branch: main / (root)**. A URL pública aparece em
-alguns minutos na mesma tela. (Não é necessário ter Git instalado só para
-usar a página localmente ou testar no navegador.)
+alguns minutos na mesma tela.
 
 ## 6. Fora do escopo deste projeto
 
 - Automação da mensagem de boas-vindas para novos seguidores no Instagram
   (já resolvida pelo cliente fora daqui — esta LP é só o destino do link).
-- Arquivo real do presente e perguntas reais do quiz (troque os placeholders
-  conforme os itens 2 e 3 acima assim que o cliente enviar o conteúdo final).
+- Perguntas reais do quiz (troque os placeholders conforme o item 2 acima
+  assim que o cliente enviar o conteúdo final).
