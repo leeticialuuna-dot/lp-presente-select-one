@@ -9,7 +9,7 @@
       depois que a pessoa responder o quiz. Troque pelo arquivo real quando o
       cliente enviar (mantenha o arquivo dentro de assets/gift/).
    ============================================================================ */
-const SCRIPT_URL = "COLE_AQUI_A_URL_DO_APPS_SCRIPT";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxLabxFpmUFTH3t9F5MS04-Lm63jPKFXSaESQBzTrsQVsrVmukEhCf0FLfBGhyUkR5V/exec";
 const GIFT_FILE = "assets/gift/Ciclo Comercial - SELECT ONE.pdf";
 const GIFT_FILENAME = "Ciclo Comercial - SELECT ONE.pdf";
 
