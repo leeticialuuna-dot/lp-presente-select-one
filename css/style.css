@@ -1,0 +1,188 @@
+/* ============================================================================
+   >> CUSTOMIZAR CORES: troque os HEX abaixo para mudar a identidade visual.
+   Sistema visual replicado da LP de diagnóstico (mesma linha editorial THE ONE).
+   ============================================================================ */
+:root{
+  --graphite-900:#0D0D0D;
+  --graphite-800:#141414;
+  --graphite-700:#1A1A1A;
+  --graphite-600:#262626;
+  --gold:#C9A24B;
+  --gold-light:#D4AF37;
+  --offwhite:#F5F5F0;
+  --max:1180px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--graphite-900);
+  color:var(--offwhite);
+  font-family:'Inter',system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  line-height:1.5;
+}
+img{max-width:100%;display:block}
+
+/* ----------------------------- ANIMAÇÕES ----------------------------- */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.fade{opacity:0;animation:fadeUp .8s ease-out forwards}
+.fade.d1{animation-delay:.12s}.fade.d2{animation-delay:.24s}.fade.d3{animation-delay:.36s}.fade.d4{animation-delay:.48s}
+@media (prefers-reduced-motion:reduce){.fade{animation:none;opacity:1}}
+
+/* ------------------------------- HERO ------------------------------- */
+.hero{
+  position:relative;
+  min-height:78vh;
+  display:flex;align-items:center;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(201,162,75,.10), transparent 45%),
+    var(--graphite-900);
+}
+.topbar{position:absolute;top:0;left:0;right:0;z-index:3;display:flex;justify-content:center;padding:22px 24px}
+.topbar .wm{font-weight:600;letter-spacing:.42em;font-size:14px;color:var(--offwhite);text-transform:uppercase}
+
+.hero-inner{
+  position:relative;z-index:2;
+  width:100%;max-width:var(--max);margin:0 auto;
+  padding:96px 24px 56px;
+  text-align:center;
+}
+.eyebrow{
+  color:var(--gold);font-size:12px;font-weight:500;
+  letter-spacing:.34em;text-transform:uppercase;margin-bottom:18px;
+}
+h1{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-weight:700;line-height:1.04;letter-spacing:-.01em;
+  font-size:clamp(2.4rem,7vw,4.4rem);
+  max-width:16ch;margin:0 auto;
+}
+.sub{
+  margin-top:20px;max-width:54ch;margin-left:auto;margin-right:auto;
+  font-size:clamp(1rem,2.4vw,1.25rem);
+  color:rgba(245,245,240,.82);font-weight:300;
+}
+.trust{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;justify-content:center}
+.trust span{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;font-weight:500;color:rgba(245,245,240,.85);
+  border:1px solid rgba(201,162,75,.35);border-radius:999px;
+  padding:8px 15px;background:rgba(13,13,13,.4);
+}
+.trust span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
+
+/* ------------------------------ BOTÕES ------------------------------ */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;justify-content:center;
+  background:var(--gold);color:var(--graphite-900);
+  font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;
+  border:none;border-radius:8px;padding:16px 30px;cursor:pointer;
+  text-decoration:none;transition:.25s;
+}
+.btn:hover{background:var(--gold-light);box-shadow:0 0 34px -8px rgba(212,175,55,.65);transform:translateY(-1px)}
+.btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.btn.full{width:100%}
+.btn[disabled]{opacity:.6;cursor:not-allowed;transform:none;box-shadow:none}
+.hero .btn{margin-top:32px}
+.hero .btn .arrow{transition:transform .25s}
+.hero .btn:hover .arrow{transform:translateY(3px)}
+
+/* ------------------------------ SEÇÃO FORM ------------------------------ */
+.form-section{
+  max-width:var(--max);margin:0 auto;
+  padding:64px 24px 40px;
+  display:grid;grid-template-columns:1fr;gap:40px;
+}
+@media(min-width:920px){
+  .form-section{grid-template-columns:1.05fr .95fr;align-items:start;padding:88px 24px 56px}
+}
+.pitch h2{
+  font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;
+  font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.1;
+}
+.pitch p{margin-top:16px;color:rgba(245,245,240,.72);font-weight:300;font-size:1.05rem}
+.bullets{list-style:none;margin-top:26px;display:grid;gap:14px}
+.bullets li{display:flex;gap:12px;align-items:flex-start;color:rgba(245,245,240,.85)}
+.bullets .tick{
+  flex:none;width:22px;height:22px;border:1px solid rgba(201,162,75,.55);border-radius:50%;
+  display:grid;place-items:center;color:var(--gold);margin-top:2px
+}
+.pitch .signature{margin-top:30px;display:flex;align-items:center;gap:14px}
+.pitch .signature .name{font-weight:600}
+.pitch .signature .role{color:rgba(245,245,240,.55);font-size:.9rem}
+
+/* ------------------------------ CARD FORM ------------------------------ */
+.card{
+  background:rgba(26,26,26,.72);border:1px solid var(--graphite-600);
+  border-radius:16px;padding:28px;
+  box-shadow:0 30px 60px -30px rgba(0,0,0,.8);
+  backdrop-filter:blur(6px);
+}
+@media(min-width:920px){.card{padding:34px}}
+.card h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.7rem}
+.card .hint{color:rgba(245,245,240,.55);font-size:.9rem;margin-top:4px;margin-bottom:18px}
+
+.field{margin-bottom:16px}
+label{display:block;font-size:13px;font-weight:500;color:rgba(245,245,240,.8);margin-bottom:7px}
+input,select{
+  width:100%;background:rgba(20,20,20,.85);color:var(--offwhite);
+  border:1px solid var(--graphite-600);border-radius:9px;
+  padding:13px 14px;font-size:15px;font-family:inherit;outline:none;transition:.2s;
+}
+input::placeholder{color:rgba(245,245,240,.32)}
+input:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,162,75,.22)}
+select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23C9A24B' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px}
+.invalid input,.invalid select{border-color:#ef5350;box-shadow:0 0 0 3px rgba(239,83,80,.18)}
+.err{color:#ff8a80;font-size:12px;margin-top:6px;display:none}
+.invalid .err{display:block}
+
+/* Honeypot (anti-spam) - invisível */
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+.form-msg{margin-top:6px;font-size:14px;padding:12px 14px;border-radius:9px;display:none}
+.form-msg.show{display:block}
+.form-msg.error{background:rgba(239,83,80,.12);border:1px solid rgba(239,83,80,.4);color:#ff8a80}
+
+.privacy{text-align:center;color:rgba(245,245,240,.4);font-size:12px;margin-top:14px}
+
+/* Estado de SUCESSO */
+.success{display:none;text-align:center;padding:48px 22px}
+.success.show{display:block;animation:fadeUp .6s ease-out}
+.success .circle{
+  width:66px;height:66px;border-radius:50%;border:1px solid rgba(201,162,75,.55);
+  display:grid;place-items:center;margin:0 auto 22px;color:var(--gold)
+}
+.success h3{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:600}
+.success p{margin-top:14px;color:rgba(245,245,240,.72);max-width:34ch;margin-left:auto;margin-right:auto}
+.success .brand{margin-top:30px;color:rgba(201,162,75,.8);font-size:12px;letter-spacing:.3em;text-transform:uppercase}
+
+/* ------------------------- PERGUNTAS FREQUENTES ------------------------- */
+.faq{max-width:760px;margin:0 auto;padding:8px 24px 64px}
+.faq h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(1.7rem,4vw,2.3rem);text-align:center;margin-bottom:28px}
+.faq details{border-top:1px solid rgba(255,255,255,.09);padding:18px 2px}
+.faq details:last-of-type{border-bottom:1px solid rgba(255,255,255,.09)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:18px;
+  font-weight:500;font-size:1.05rem;color:var(--offwhite)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--gold);font-size:1.5rem;line-height:1;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin-top:12px;color:rgba(245,245,240,.7);font-weight:300;line-height:1.65}
+
+/* Rodapé */
+footer{max-width:var(--max);margin:0 auto;padding:28px 24px 48px;text-align:center;color:rgba(245,245,240,.4);font-size:13px;border-top:1px solid rgba(255,255,255,.06)}
+footer a{color:var(--gold);text-decoration:none}
+
+/* ============================ AJUSTES MOBILE ============================ */
+@media(max-width:680px){
+  .hero{min-height:auto}
+  .hero-inner{padding:88px 24px 40px}
+  h1{font-size:clamp(2.2rem,8.6vw,3rem);max-width:16ch}
+  .sub{font-size:1.02rem;max-width:42ch}
+  .topbar{padding:18px}
+  .topbar .wm{font-size:12.5px;letter-spacing:.34em}
+  .trust{gap:8px;margin-top:20px}
+  .trust span{font-size:12px;padding:7px 13px}
+  .form-section{padding-top:48px}
+}

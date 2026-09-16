@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ===================== SEO / COMPARTILHAMENTO ===================== -->
+<!-- >> CUSTOMIZAR TÍTULO E DESCRIÇÃO conforme o presente definido -->
+<title>Presente Gratuito para Médicos e Empresários da Saúde | THE ONE</title>
+<meta name="description" content="Baixe gratuitamente o material exclusivo da THE ONE para médicos e empresários da área da saúde." />
+<meta property="og:title" content="Presente Gratuito | THE ONE" />
+<meta property="og:description" content="Baixe gratuitamente o material exclusivo da THE ONE." />
+<meta property="og:type" content="website" />
+
+<!-- Fontes: Cormorant Garamond (títulos) + Inter (corpo) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ============================== HERO ============================== -->
+  <header class="hero">
+    <div class="topbar"><span class="wm">THE ONE</span></div>
+    <div class="hero-inner">
+      <p class="eyebrow fade">Para médicos e empresários da área da saúde</p>
+      <!-- >> CUSTOMIZAR HEADLINE conforme o nome do presente -->
+      <h1 class="fade d1">Seu Presente Exclusivo Para Crescer Sua Clínica</h1>
+      <!-- >> CUSTOMIZAR SUBHEADLINE -->
+      <p class="sub fade d2">Um material gratuito e direto ao ponto para você aplicar hoje mesmo na sua clínica ou consultório.</p>
+      <!-- >> CUSTOMIZAR TEXTO DO CTA -->
+      <a href="#presente" class="btn fade d3">Quero meu presente <span class="arrow">↓</span></a>
+      <!-- Selos de confiança -->
+      <div class="trust fade d4">
+        <span>100% gratuito</span>
+        <span>Download imediato</span>
+        <span>Sem enrolação</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================ FORMULÁRIO / QUIZ ============================ -->
+  <section class="form-section" id="presente">
+
+    <!-- Coluna de argumentação -->
+    <div class="pitch">
+      <!-- >> CUSTOMIZAR: descreva o que a pessoa vai receber -->
+      <h2>O que você recebe com este material.</h2>
+      <p>Responda algumas perguntas rápidas para liberarmos o download do seu presente, feito para quem quer crescer com clareza e consistência.</p>
+      <ul class="bullets">
+        <!-- >> CUSTOMIZAR: liste os principais benefícios do presente -->
+        <li><span class="tick">✓</span> Conteúdo prático, sem enrolação</li>
+        <li><span class="tick">✓</span> Aplicável hoje mesmo na sua clínica</li>
+        <li><span class="tick">✓</span> Direto de quem já ajudou dezenas de clínicas a crescer</li>
+      </ul>
+      <div class="signature">
+        <div>
+          <div class="name">Fabrício R. Barin</div>
+          <div class="role">THE ONE</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card do quiz -->
+    <div class="card" id="card">
+      <form id="quizForm" novalidate>
+        <h3>Receba seu presente</h3>
+        <p class="hint">Preencha os campos abaixo. É rápido e sem compromisso.</p>
+
+        <div id="quizFields"><!-- Preenchido automaticamente por js/questions.js + js/app.js --></div>
+
+        <!-- Honeypot anti-spam: humanos não veem. -->
+        <div class="hp" aria-hidden="true">
+          <label>Não preencha<input id="website" name="website" type="text" tabindex="-1" autocomplete="off" /></label>
+        </div>
+
+        <div class="form-msg error" id="formMsg"></div>
+
+        <!-- >> CUSTOMIZAR TEXTO DO BOTÃO DE ENVIO -->
+        <button type="submit" class="btn full" id="submitBtn">Quero receber meu presente</button>
+        <p class="privacy">Seus dados são confidenciais e usados apenas para contato.</p>
+      </form>
+
+      <!-- Estado de sucesso (aparece sem recarregar a página) -->
+      <div class="success" id="success">
+        <div class="circle">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Prontinho!</h3>
+        <p>Seu presente está liberado. Clique no botão abaixo para baixar.</p>
+        <a class="btn full" id="downloadBtn" href="#" style="margin-top:22px">Baixar meu presente</a>
+        <div class="brand">THE ONE</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PERGUNTAS FREQUENTES ===================== -->
+  <!-- >> CUSTOMIZAR/REMOVER conforme o conteúdo real do presente -->
+  <section class="faq">
+    <h2>Perguntas frequentes</h2>
+
+    <details>
+      <summary>Isso é uma venda disfarçada?</summary>
+      <p>Não. É um material 100% gratuito. Você recebe o conteúdo assim que preencher o formulário, sem nenhum compromisso.</p>
+    </details>
+
+    <details>
+      <summary>Preciso pagar algo?</summary>
+      <p>Não. O download é totalmente gratuito.</p>
+    </details>
+
+    <details>
+      <summary>Como recebo o material?</summary>
+      <p>Assim que você enviar o formulário, o botão de download aparece na hora, direto na página.</p>
+    </details>
+  </section>
+
+  <footer>
+    © <span id="ano"></span> THE ONE · <a href="https://instagram.com/fabriciobarin" target="_blank" rel="noopener">@fabriciobarin</a>
+  </footer>
+
+  <script src="js/questions.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
