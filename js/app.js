@@ -10,8 +10,8 @@
       cliente enviar (mantenha o arquivo dentro de assets/gift/).
    ============================================================================ */
 const SCRIPT_URL = "COLE_AQUI_A_URL_DO_APPS_SCRIPT";
-const GIFT_FILE = "assets/gift/Ciclo Comercial - THE ONE.pdf";
-const GIFT_FILENAME = "Ciclo Comercial - THE ONE.pdf";
+const GIFT_FILE = "assets/gift/Ciclo Comercial - SELECT ONE.pdf";
+const GIFT_FILENAME = "Ciclo Comercial - SELECT ONE.pdf";
 
 /* -------------------------------- Elementos -------------------------------- */
 const quizForm = document.getElementById("quizForm");
