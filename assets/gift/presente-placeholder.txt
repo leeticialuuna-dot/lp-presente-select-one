@@ -1,7 +1,0 @@
-Este é um arquivo de placeholder.
-
-Substitua este arquivo pelo presente real (e-book, PDF, planilha etc.)
-enviado pelo Fabrício, mantendo-o dentro desta pasta (assets/gift/).
-
-Depois de trocar o arquivo, atualize as constantes GIFT_FILE e GIFT_FILENAME
-no topo de js/app.js para apontar para o nome do novo arquivo.

@@ -54,7 +54,10 @@ continuem batendo com os dados enviados.
 
 ## 3. Trocar o arquivo do presente
 
-1. Coloque o arquivo real (PDF, e-book, planilha etc.) dentro de `assets/gift/`.
+O presente atual já é o e-book real enviado pelo Fabrício:
+`assets/gift/Ciclo Comercial - THE ONE.pdf`. Para trocar por outro material no futuro:
+
+1. Coloque o novo arquivo (PDF, e-book, planilha etc.) dentro de `assets/gift/`.
 2. Abra `js/app.js` e edite as constantes no topo:
    ```js
    const GIFT_FILE = "assets/gift/nome-do-arquivo-real.pdf";

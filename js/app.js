@@ -10,8 +10,8 @@
       cliente enviar (mantenha o arquivo dentro de assets/gift/).
    ============================================================================ */
 const SCRIPT_URL = "COLE_AQUI_A_URL_DO_APPS_SCRIPT";
-const GIFT_FILE = "assets/gift/presente-placeholder.txt";
-const GIFT_FILENAME = "presente-the-one.txt";
+const GIFT_FILE = "assets/gift/Ciclo Comercial - THE ONE.pdf";
+const GIFT_FILENAME = "Ciclo Comercial - THE ONE.pdf";
 
 /* -------------------------------- Elementos -------------------------------- */
 const quizForm = document.getElementById("quizForm");
@@ -153,7 +153,7 @@ quizForm.addEventListener("submit", async e => {
 function showSuccess() {
   quizForm.style.display = "none";
   successEl.classList.add("show");
-  downloadBtn.href = GIFT_FILE;
+  downloadBtn.href = encodeURI(GIFT_FILE);
   downloadBtn.setAttribute("download", GIFT_FILENAME);
   card.scrollIntoView({ behavior: "smooth", block: "center" });
 }
